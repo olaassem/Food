@@ -1,0 +1,15 @@
+/.env
+/.idea
+
+# Dependencies
+/node_modules
+
+# System
+.DS_Store
+
+# Misc
+.package-lock.json
+npm-debug.log
+
+# Public
+
