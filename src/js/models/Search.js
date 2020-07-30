@@ -9,9 +9,7 @@ export default class Search {
         try {
             const results = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${this.query}`);  //axios automatically returns json & works on all browsers
             this.result = results.data.recipes;
-            
-            //console.log(this.result);
-    
+                
         } catch(error) {
             alert(error);
         }
