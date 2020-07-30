@@ -10,9 +10,7 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '';
 }
 
-
 /*
-
 //Pasta with tomato and spinach
 acc: 0 / acc + cur.length = 5 / newTitle = ['Pasta'].
 acc: 5 / acc + cur.length = 4 / newTitle = ['Pasta', 'with'].
