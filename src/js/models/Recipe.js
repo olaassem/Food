@@ -13,24 +13,22 @@ export default class Recipe {
             this.img = res.data.recipe.image_url;
             this.url = res.data.recipe.source_url;
             this.ingredients = res.data.recipe.ingredients;
-        } catch(error) {
+        } catch (error) {
             console.log(error);
-            alert('Oops. Something Went Wrong :(');
+            alert('Something went wrong :(');
         }
     }
 
     calcTime() {
-        // Assumes we need 15 mins for every 3 ingredients
+        // Assuming that we need 15 min for each 3 ingredients
         const numIng = this.ingredients.length;
         const periods = Math.ceil(numIng / 3);
         this.time = periods * 15;
     }
 
-    
     calcServings() {
         this.servings = 4;
     }
-
 
     parseIngredients() {
         const unitsLong = ['tablespoons', 'tablespoon', 'ounces', 'ounce', 'teaspoons', 'teaspoon', 'cups', 'pounds'];
@@ -89,7 +87,6 @@ export default class Recipe {
 
             return objIng;
         });
-
         this.ingredients = newIngredients;
     }
 
@@ -104,5 +101,4 @@ export default class Recipe {
 
         this.servings = newServings;
     }
-};
-
+}
